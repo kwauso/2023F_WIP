@@ -5,8 +5,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 
-int
-main()
+int main()
 {
  int sock;
  struct sockaddr_in addr;
