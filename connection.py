@@ -1,10 +1,8 @@
 import socket
-import datetime
 import sys
 
 #server: python s hostname.local port_number extension
-#
-
+#clienr: python c hostname.local port_number extension
 
 def server(hostname, port, extention):
     ip = socket.gethostbyname(str(hostname))
@@ -15,7 +13,6 @@ def server(hostname, port, extention):
         while True:
             conn, addr = s.accept()
             with conn:
-                #dt_now = datetime.datetime.now()
                 filename = extention
                 with open(filename, mode="ab") as f:
                     while True:
@@ -38,7 +35,6 @@ def client(hostname, port, filename):
                 print(repr(data.decode()))
         except:
             pass
-
 
 if __name__ == "__main__":
     if (sys.argv[1] == "s"):
