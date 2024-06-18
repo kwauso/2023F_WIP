@@ -44,7 +44,6 @@ class frameDragAndDrop(tk.LabelFrame):
         self.rowconfigure(0, weight=1)
 
     def funcDragAndDrop(self, e):
-        ## ここを編集してください
         message = '\n' + e.data
 
         self.textbox.configure(state='normal')
